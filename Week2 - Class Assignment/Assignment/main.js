@@ -69,9 +69,10 @@ const group = new THREE.Group();
 group.scale.y = 2;
 group.rotation.y = 0.2;
 scene.add(group);
-// ----- top-left corner (cubes) -----
+
+// cubes
 const cube1 = new THREE.Mesh(new THREE.BoxGeometry(1,1,1),
-  new THREE.MeshStandardMaterial({ color: 0xF88379 }));
+  new THREE.MeshStandardMaterial({ color: 0xFFC0CB }));
 cube1.position.set(-7, 3, 0);
 group.add(cube1);
 
@@ -81,59 +82,57 @@ cube2.position.set(-4, 3, 0);
 group.add(cube2);
 
 const cube3 = new THREE.Mesh(new THREE.BoxGeometry(1,1,1),
-  new THREE.MeshStandardMaterial({ color: 0xA95C68 }));
+  new THREE.MeshStandardMaterial({ color: 0xDB7093 }));
 cube3.position.set(-1, 3, 0);
 group.add(cube3);
 
-// ----- top-right corner (spheres) -----
+//spheres
 const sphere1 = new THREE.Mesh(new THREE.SphereGeometry(0.7,32,16),
-  new THREE.MeshStandardMaterial({ color: 0x87CEEB }));
+  new THREE.MeshStandardMaterial({ color: 0xFFB6C1 }));
 sphere1.position.set(3, 3, 0);
 group.add(sphere1);
 
 const sphere2 = new THREE.Mesh(new THREE.SphereGeometry(0.7,32,16),
-  new THREE.MeshStandardMaterial({ color: 0x00CED1 }));
+  new THREE.MeshStandardMaterial({ color: 0xFF1493 }));
 sphere2.position.set(5, 3, 0);
 group.add(sphere2);
 
 const sphere3 = new THREE.Mesh(new THREE.SphereGeometry(0.7,32,16),
-  new THREE.MeshStandardMaterial({ color: 0x4682B4 }));
+  new THREE.MeshStandardMaterial({ color: 0xC71585 }));
 sphere3.position.set(8, 3, 0);
 group.add(sphere3);
 
-// ----- bottom-left corner (cones) -----
+//cones
 const cone1 = new THREE.Mesh(new THREE.ConeGeometry(0.7,1.2,24),
-  new THREE.MeshStandardMaterial({ color: 0xFFD700 }));
-cone1.position.set(-8, -3, 0);
+  new THREE.MeshStandardMaterial({ color: 0xFF69B4 }));
+cone1.position.set(-8, -7, 0);
 group.add(cone1);
 
 const cone2 = new THREE.Mesh(new THREE.ConeGeometry(0.7,1.2,24),
-  new THREE.MeshStandardMaterial({ color: 0xFFA500 }));
-cone2.position.set(-3, -3, 0);
+  new THREE.MeshStandardMaterial({ color: 0xFFB6C1 }));
+cone2.position.set(-3, -1, 0);
 group.add(cone2);
 
 const cone3 = new THREE.Mesh(new THREE.ConeGeometry(0.7,1.2,24),
-  new THREE.MeshStandardMaterial({ color: 0xFF8C00 }));
+  new THREE.MeshStandardMaterial({ color: 0xFF1493 }));
 cone3.position.set(0, -3, 0);
 group.add(cone3);
 
-// ----- bottom-right corner (cylinders) -----
+//cylinder
 const cyl1 = new THREE.Mesh(new THREE.CylinderGeometry(0.6,0.6,1.2,24),
-  new THREE.MeshStandardMaterial({ color: 0x32CD32 }));
-cyl1.position.set(2, -3, 0);
+  new THREE.MeshStandardMaterial({ color: 0xDB7093 }));
+cyl1.position.set(2, -5, 0);
 group.add(cyl1);
 
 const cyl2 = new THREE.Mesh(new THREE.CylinderGeometry(0.6,0.6,1.2,24),
-  new THREE.MeshStandardMaterial({ color: 0x228B22 }));
+  new THREE.MeshStandardMaterial({ color: 0xC71585 }));
 cyl2.position.set(5, -3, 0);
 group.add(cyl2);
 
 const cyl3 = new THREE.Mesh(new THREE.CylinderGeometry(0.6,0.6,1.2,24),
-  new THREE.MeshStandardMaterial({ color: 0x006400 }));
+  new THREE.MeshStandardMaterial({ color: 0xFF69B4 }));
 cyl3.position.set(10, -3, 0);
 group.add(cyl3);
-
-
 function animate() {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
